@@ -1,0 +1,20 @@
+---
+- name: 'Upgrade all packages to the latest version'
+  apt:
+    update_cache: yes
+    upgrade: yes
+  become: yes
+
+- name: "Instalandos todas as dependencias" 
+  apt:
+    name: 
+    - php5
+    - apache2
+    - libapache2-mod-php5
+    - php5-gd
+    - libssh2-php
+    - php5-mcrypt
+    - php5-mysql
+    - vim
+    - nano 
+  become: yes
